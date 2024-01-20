@@ -1,0 +1,31 @@
+div {
+    color: aqua;
+}
+
+.block {
+    color: red;
+}
+
+#id-block {
+    color: blueviolet;
+}
+
+[data-example="value2"] {
+    color: palevioletred;
+}
+
+.block1, .block2, .block3 {
+    color: blueviolet;
+}
+
+span.blue-block {
+    color: chartreuse;
+}
+
+div .orange {
+    color: red;
+}
+
+.parent>.child {
+    color: black;
+}
