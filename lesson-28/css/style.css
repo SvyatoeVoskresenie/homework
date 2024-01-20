@@ -1,0 +1,44 @@
+.text {
+    font-family: "Montserrat";
+    font-size: 30px;
+    word-spacing: 30px;
+    text-decoration: underline double;
+}
+#line {
+    height: 3px;
+    background-color: rgb(140, 36, 219);
+}
+
+.text1 {
+    font-family: "Open Sanc", sans-serif;
+    font-size: 20px;
+    font-weight: 300px;
+    line-height: 30px;
+    font-style: italic;
+}
+
+.text2 {
+    font-family:"Arial", sans-serif;
+    font-size: 20px;
+    text-decoration: line-through;
+}
+
+.text3 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: medium;
+}
+
+.text4 {
+    word-spacing: 30px;
+    font-size: medium;
+    color: #f610f6;
+    text-decoration: overline wavy;
+    text-shadow: 1px 0px 3px #f610f6;
+}
+
+.text5 {
+    letter-spacing: 5px;
+    font-size: medium;
+    text-decoration: underline double;
+}
