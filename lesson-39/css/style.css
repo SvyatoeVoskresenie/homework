@@ -1,0 +1,115 @@
+body {
+    font-size: 40px;
+    background: #000001;
+    color: aliceblue;
+    margin: 40px;
+    font-family:'Courier New', Courier, monospace;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.flexbox {
+    display: flex;
+    border: 15px solid #c6c6e7;
+    min-height: 50vh;
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
+.flexbox_item-1 {
+    border: 15px solid #8585d6;
+    flex: 30 0 200px;
+}
+.flexbox_item-2 {
+    border: 15px solid #8585d6;
+    flex: 30 0 200px;
+}
+.flexbox_item-3 {
+    border: 15px solid #8585d6;
+    flex: 30 0 200px;
+}
+.pupupu {
+    border: 1px solid #000001;
+    text-align: justify;
+    font-size: medium;
+}
+.pupupu1 {
+    border: 1px solid #000001;
+    text-align: justify;
+    font-size: medium;
+}
+
+.tiger {
+    display: inline-block;
+    margin: 20px 150px;
+    height: 200px;
+    width: 200px;
+}
+
+.flexbox_content {
+    padding: 60px 30px;
+}
+
+.flexbox_content {
+    border: none;
+    padding: 40px;
+    background: linear-gradient(#c6c6e7, #9e54b2);
+}
+
+.flexbox {
+    display: flex;
+    justify-content: center;
+    
+}
+
+/* РАЗДЕЛЕНИЕ */
+
+.flexbox1 {
+    display: flex;
+    border: 15px solid #c6c6e7;
+    min-height: 50vh;
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
+.flexbox_item1 {
+    border: 15px solid #8585d6;
+}
+.flexbox_item1:nth-child(2) .flexbox_conten1 {
+    padding: 60px 30px;
+}
+
+.flexbox_content1 {
+    border: none;
+    padding: 40px;
+    background: linear-gradient(#c6c6e7, #9e54b2);
+}
+
+.flexbox1 {
+    display: flex;
+    justify-content: center;
+    /* align-items: last baseline; */
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.flexbox_item1 {
+    border: 15px solid #8585d6;
+    order: 2;
+    align-self: baseline;
+}
+.flexbox_item2 {
+    border: 15px solid #8585d6;
+    order: 3;
+    align-self: end;
+
+}
+.flexbox_item3 {
+    border: 15px solid #8585d6;
+    order: 1;
+    align-self: center;
+
+}
+
