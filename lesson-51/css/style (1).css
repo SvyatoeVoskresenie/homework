@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+
+.heading {
+    padding: 50px;
+    margin-left: 540px;
+    color:#5459e1;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;;
+}
+
+.block1 {
+    background-color: #dd7878;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: large;
+    text-shadow: 5px 5px 10px #2026c8;
+    display: inline-block;
+    width: 300px;
+    padding: 30px;
+    margin: 10px 10px 20px 132px;
+    outline: #ab3f3f groove 10px;
+    font-weight: 500px;
+        text-align: justify;
+}
+
+.block3 {
+    background-color: #dd7878;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: large;
+    text-shadow: 5px 5px 10px #2026c8;
+    display: inline-block;
+    width: 300px;
+    padding: 30px;
+    margin: 10px 10px 97px 132px;
+    outline: #ab3f3f groove 10px;
+    font-weight: 500px;
+        text-align: justify;
+    box-shadow: 0px 52px 50px #2026c8;
+}
+
+.inline1 {
+    display: inline-block;
+    background-color: #5459e1;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: large;
+    width: 300px;
+    margin: 110px 13px 5px 130px ;
+    border: 3px #2026c8 solid;
+    border-radius: 4px;
+    outline: groove #2026c8;
+    box-shadow: 0px -49px 50px #ab3f3f;
+}
+
+.block2 {
+    display: block;
+    background-color: #5459e1;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: large;
+    width: 300px;
+    margin: -610px 13px 0px 1050px ;
+    border: 3px #2026c8 solid;
+    border-radius: 4px;
+    outline: groove #2026c8;
+    box-shadow: 0px -49px 50px #ab3f3f;
+}
+
+.img {
+    width: 564px;
+    height: 743px;
+    display: inline-block;
+    padding: 50px;
+    margin: -313px 0px 0px 450px;
+}
