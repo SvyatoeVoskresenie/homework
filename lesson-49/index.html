@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>инпут. а есть инаут?</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="search">
+            <form name="search-form" method="get" role="search">
+                <input type="search" placeholder="Поиск не работает:<">
+                <button type="submit">Поиск</button>
+            </form>
+        </div>
+        <br>
+        <br>
+        <form name="form1" autocomplete="on">
+            <h2 class="title">Опрос по мультфильмам</h2>
+            <br>
+            <br>
+            <label>
+                Ваше имя
+                <input type="text" placeholder="Иван Иваноч" required >
+            </label>
+            <br>
+            <br>
+            <label>
+                Что из этого ты смотреть?
+                <select name="select1">
+                    <option value="var1">--Выбери--</option>
+                    <option value="var2">Рик и морти</option>
+                    <option value="var3">Отель хазбин</option>
+                    <option value="var4">Гравити Фолс</option>
+                    <option value="var5">Ничего из перечисленного</option>
+                </select>
+            </label>
+            <br>
+            <br>
+            <label>
+                Предложи свои варианты
+                <textarea name="your-var" cols="30" rows="10"></textarea>
+            </label>
+            <br>
+            <br>
+            <label>
+                Ты любишь мультики?
+                <input type="radio" name="yes-no"> Да
+                <input type="radio" name="yes-no"> Нет
+            </label>
+            <br>
+            <br>
+            <label>
+                Почему ты смотришь мультики?
+                <fieldset class="fieldset">
+                    <input type="checkbox"> Они красочные и интересные
+                    <br>
+                    <input type="checkbox"> Люблю их с детства
+                    <br>
+                    <input type="checkbox"> Затрудняюсь ответить
+                    <br>
+                    <input type="checkbox"> Другое <input type="text">
+                </fieldset>
+            </label>
+            <br>
+            <br>
+            <label>
+                Ваш номер телефона
+                <input type="tel" placeholder="7 (999) - 999 99 99">
+            </label>
+            <br>
+            <br>
+            <label>
+                Ваша почта
+                <input type="email" placeholder="some-email@gmail.com">
+            </label>
+            <br>
+            <br>
+            <label>
+                Когда Вы в последний раз смотрели мультик?
+                <input type="date">
+            </label>
+            <br>
+            <br>
+            <label>
+                Загрузи фотку своего любимого мульта
+                <input type="file" accept="image/png, image/jpeg">
+            </label>
+            <br>
+            <br>
+            <label>
+                Введите пароль
+                <input type="password">
+            </label>
+            <br>
+            <br>
+            <br>
+            <button type="reset">Очистить</button>
+            <button type="submit">Отправить</button>
+
+        </form>
+    </div>
+</body>
+
+</html>
