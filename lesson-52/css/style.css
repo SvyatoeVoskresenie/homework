@@ -1,0 +1,116 @@
+.units {
+  display: flex;
+  font-size: 50px;
+  gap: 50px;
+}
+
+.units__col {
+  flex: 0 1 50%;
+}
+
+.units__col h2 {
+  text-align: center;
+}
+
+.units__item {
+  font-size: 30px;
+  background-color: rgb(224, 224, 224);
+  margin-bottom: 5px;
+  padding-left: 20px;
+}
+
+.line {
+  height: 2px;
+  background-color: #333;
+  margin: 50px 0;
+}
+
+p {
+  font-size: 40px;
+}
+
+.em__quad, .vhw__quad, .rem__quad, .precents__quad {
+  width: 200px;
+  height: 200px;
+  background-color: #333;
+}
+
+.vhw__quad {
+  background-color: #81ccdd;
+}
+
+.precents__parent-quad {
+  background-color: green;
+}
+.precents__child-quad {
+  background-color: #333;
+}
+
+/* -------------------------------------------- */
+
+/* .precents__container {
+  display: flex;
+  justify-content: space-around;
+  font-size: 30px;
+}
+
+.precents__parent-quad {
+  height: 400px;
+  width: 500px;
+}
+
+.precents__child-quad {
+  height: 50%;
+  width: 100%;
+}
+
+.precents__text {
+  font-size: 300%;
+  text-align: justify;
+  line-height: 130%;
+}
+
+.precents__quad {
+  height: 100px;
+  width: 100px;
+  margin: 30%;
+  padding: 30%;
+} */
+
+/* -------------------------------- */
+.vhw__text-1 {
+  font-size: 1vw;
+}
+
+.vhw__text-2 {
+  font-size: 1vh;
+}
+
+.vhw__quad {
+  width: 100vw;
+  height: 10vh;
+}
+
+/* ------------------------------------ */
+
+.em {
+  font-size: 30px;
+}
+
+.em__text {
+  font-size: 2em;
+}
+
+.rem__text {
+  font-size: 2rem;
+}
+
+.em__quad {
+  width: 10em;
+  height: 10em;
+}
+
+.rem__quad {
+  width: 10rem;
+  height: 10rem;
+}
