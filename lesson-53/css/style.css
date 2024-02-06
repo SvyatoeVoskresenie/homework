@@ -1,0 +1,16 @@
+.text {
+  font-family: 'IBM Plex Serif';
+  font-size: 3em;
+}
+
+.border {
+  border: 3px solid #010000;
+}
+
+.text-1 {
+    font-family: 'Poppins';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 3em;
+    font-weight: 100;
+}
