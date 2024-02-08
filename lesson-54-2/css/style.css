@@ -27,7 +27,7 @@ body {
 .recktangle {
   background-color: #a19898;
   height: 100px;
-  width: 600px;
+/*   width: 600px; */
   border-radius: 20px;
   position: fixed;
   left: 50%;
