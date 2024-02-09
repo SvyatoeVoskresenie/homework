@@ -1,0 +1,102 @@
+
+body {
+    background-color: #333f6d;
+    font-size: 16px;
+    font-weight: 400;
+    color: aliceblue;
+
+}
+
+@font-face {
+    font-family: "IBM Plex Serif", "Arial", sans-serif;
+    src: local('IBM Plex Serif Medium'), local('IBMPlexSerif-Medium'),
+        url('../fonts/IBMPlexSerif-Medium.woff2') format('woff2'),
+        url('../fonts/IBMPlexSerif-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+.container {
+    max-width: 930px;
+    max-height: 100%;
+    margin: 0 auto;
+    padding: 0px 15px;
+}
+
+.wrapper {
+    padding: 50px;
+    min-height: 100%;
+}
+
+
+.link {
+    display: block;
+    background-color: #3f597a;
+    border-radius: 2em;
+    padding: 2em;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 100px;
+}
+
+.input {
+    display: block;
+    width: 100%;
+    padding: 2em;
+    margin-bottom: 100px;
+    font-size: inherit;
+}
+
+.button {
+    display: block;
+    background-color: #3f597a;
+    border-radius: 2em;
+    padding: 2em;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: inherit;
+    color: inherit;
+    margin-bottom: 100px;
+    width: 100%;
+}
+
+:hover {
+    box-shadow: 0px 0px 30px 10px #336d44;
+}
+
+
+.button:hover {
+    background: #349250;
+}
+
+.button:active {
+    background: #336d44;
+    transform: translateY(-50px);
+}
+
+.link:hover {
+    background: #349250;
+}
+
+.link:active {
+    background: #336d44;
+    transform: translateY(50px);
+}
+
+.input:focus {
+    text-shadow: 0px 0px 10px #336d44;
+}
+
+.list__item:nth-child(3) {
+    color: aquamarine;
+}
+
+.list__item:nth-child(even) {
+    color: #349250;
+}
+.list__item:nth-child(odd) {
+    color: #8a3492;
+}
+
