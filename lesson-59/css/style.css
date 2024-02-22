@@ -1,0 +1,135 @@
+
+body {
+    background-color: #333f6d;
+    font-weight: 400;
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 1030px;
+    max-height: 100%;
+    margin: 0 auto;
+    padding: 0px 15px;
+}
+
+.animation-background {
+    height: 200px;
+    width: 100%;
+    background: #8690b8;
+    border-radius: 20px;
+    margin: 30px 0px;
+    position: relative;
+}
+
+.animation-block {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    background-color: #a5b3e9;
+    position: absolute;
+}
+
+.color {
+    animation: move-color-block 2s infinite linear 1s alternate-reverse;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+@keyframes move-color-block {
+    0% {
+        left: 0px;
+    }
+    50% {
+        background: #b7c1e8;
+        border-radius: 100px;
+        font-size: 150%;
+    }
+    100% {
+        left: calc(100% - 200px);
+    }
+}
+
+.hidden {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #9852a4;
+    border-radius: 100px;
+    animation: move-circle 2s infinite alternate-reverse,
+    opacity 2s infinite alternate-reverse;
+}
+
+
+@keyframes move-circle {
+    0% {
+        left: 0px;
+    }
+    50% {
+        width: 100px;
+        height: 100px;
+    }
+    100% {
+        left: calc(100% - 200px);
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.one-two {
+    display: flex;
+    justify-content: space-between;
+}
+
+.one {
+    background: #c6abca;
+    animation: move-one 2s infinite linear 1s ;
+}
+
+.two {
+    background: #9b8fd2;
+    animation: move-two 2s infinite linear 1s reverse;
+    position: absolute;
+    left: calc(100% - 200px);
+}
+
+@keyframes move-one {
+    0% {
+        left: 0px;
+    }
+    50% {
+        background: #b7c1e8;
+        border-radius: 100px;
+        font-size: 150%;
+    }
+    100% {
+        left: calc(100% - 200px);
+    }
+}
+
+@keyframes move-two {
+    0% {
+        left: 0px;
+    }
+    50% {
+        background: #b7c1e8;
+        border-radius: 100px;
+        font-size: 150%;
+    }
+    100% {
+        left: calc(100% - 200px);
+    }
+}
