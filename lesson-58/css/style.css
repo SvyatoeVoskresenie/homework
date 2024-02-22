@@ -1,0 +1,59 @@
+
+body {
+    background-color: #333f6d;
+    font-weight: 400;
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/* .container {
+    max-width: 1030px;
+    max-height: 100%;
+    margin: 0 auto;
+    padding: 0px 15px;
+} */
+
+.container-for-quad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quad {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: grey;
+    font-size: large;
+    top: 250px;
+    width: 200px;
+    height: 200px;
+    background-color: grey;
+    border-radius: 30px;
+    transition-property: color;
+    transition-duration: 3s;
+}
+
+
+.quad__line {
+    width: 0px;
+    background: #fff ;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: absolute;
+    top: -80px;
+    left: -100px;
+    transition-duration: 2s;
+}
+
+.quad:hover{
+    color: green;
+}
+
+.quad:hover .quad__line{
+    width: 200%;
+    height: 50px;
+}
