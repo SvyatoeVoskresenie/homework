@@ -1,0 +1,46 @@
+
+body {
+    background-color: #333f6d;
+    font-weight: 400;
+    color: rgb(150, 166, 180);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 1030px;
+    max-height: 100%;
+    margin: 50px auto;
+    /* margin: 10px auto;
+    padding: 10px 15px; */
+}
+
+.grid {
+    border-bottom: 4px solid #c5a0cf;
+}
+
+.item {
+    border: dotted 6px #c5a0cf;
+    padding: 10px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+
+/* неявная сетка */
+
+.grid-2 {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 200px;
+    grid-auto-flow: column;
+    grid-auto-columns: 200px; */
+    grid-template-columns: repeat(3, minmax(100px, 200px));
+    grid-template-rows: repeat(3, minmax(100px, 200px));
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    grid-auto-rows: 200px;
+}
