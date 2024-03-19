@@ -1,0 +1,72 @@
+body {
+    background-color: blueviolet;
+    font-family:'Courier New', Courier, monospace;
+    color: #1a21ef;
+    
+}
+
+.container {
+    max-width: 1000px;
+    max-height: 100%;
+    padding: 30px;
+    margin: 40px 400px;
+}
+
+.grid-element {
+    padding: 10px;
+
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body {
+    background-color: #333f6d;
+    font-weight: 400;
+    color: rgb(150, 166, 180);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 1030px;
+    max-height: 100%;
+    margin: 30px auto;
+    padding: 0px 15px;
+}
+
+
+.grid-element {
+    border: dotted 6px #c5a0cf;
+    padding: 10px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 200px 2fr ;
+    grid-template-rows: 200px 200px 200px;
+} */
