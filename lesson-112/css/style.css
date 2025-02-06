@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.btn__open {
+    min-width: 300px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2;
+    display: flex; 
+    /* // не забыть */
+    align-items: center;
+    justify-content: center;
+    background-color: #864486c1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+}
+
+.modal--open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal__window {
+    position: relative;
+    width: 50vw;
+    height: 40vh;
+    padding: 50px 20px 20px 20px;
+    background-color: #ce9fde;
+    border-radius: 12px;
+}
+
+.modal__btn-closed {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
