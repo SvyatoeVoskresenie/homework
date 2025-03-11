@@ -55,6 +55,10 @@
     padding-bottom: 145px;
 }
 
+.main__testimonials {
+    padding-bottom: 140px;
+}
+
 .button {
     display: flex;
     justify-content: center;

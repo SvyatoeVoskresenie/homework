@@ -1,18 +1,6 @@
 // Modal
 
-// const modalIsOpening = document.querySelector('.about__img-button')
-// const modalIsOpened = document.querySelector('.body')
-// const modalIsClosed = document.querySelector('.modal__cancel')
 
-// modalIsOpening.addEventListener('click', () => {
-//     modalIsOpened.classList.add('body--opened-modal')
-// }
-// )
-
-// modalIsClosed.addEventListener('click', () => {
-//     modalIsOpened.classList.remove('body--opened-modal')
-// }
-// )
 
 // ||||||||||||||||||||||
 
@@ -144,6 +132,34 @@ const swiper = new Swiper('.gallery__swiper', {
 
     });
 
+    // Слайдер отзывы ///////////////////
+
+        new Swiper('.testimonials__slider', {
+        spaceBetween: 0,
+        slidesPerView: 1,
+        centeredSlides: true,
+    
+        navigation: {
+            nextEl: '.testimonials__next',
+            prevEl: '.testimonials__prev',
+        },
+
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true,
+        },
+        
+        breakpoints: {
+            901: {
+                slidesPerView: 1.5,
+            },
+            1201: {
+                slidesPerView: 2.1,
+            }
+        }
+
+        });
+
 
 
 
@@ -151,6 +167,19 @@ const swiper = new Swiper('.gallery__swiper', {
 
 }) ()
 
+const modalIsOpening = document.querySelector('.about__img-button')
+const modalIsOpened = document.querySelector('.body')
+const modalIsClosed = document.querySelector('.modal__cancel')
+
+modalIsOpening.addEventListener('click', () => {
+    modalIsOpened.classList.add('body--opened-modal')
+}
+)
+
+modalIsClosed.addEventListener('click', () => {
+    modalIsOpened.classList.remove('body--opened-modal')
+}
+)
 
 // *************если аккордионова вкладка открыта на дизе ИЗНАЧАЛЬНО
 
