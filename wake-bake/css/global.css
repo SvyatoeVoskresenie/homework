@@ -59,6 +59,7 @@
     padding-bottom: 140px;
 }
 
+
 .button {
     display: flex;
     justify-content: center;
@@ -96,7 +97,7 @@
 
 .modal__cancel:hover path,
 .modal__cancel:hover rect{
-    stroke: #ac907a;;
+    stroke: #ac907a;
 }
 
 .modal {
@@ -178,11 +179,11 @@
 }
 
 .field__input:hover{
-    border-color: var(--accent-bg);
+    border-color: var(--accent-color);
 }
 
 .field__input:hover::placeholder {
-    color: var(--accent-bg);
+    color: var(--accent-color);
 }
 
 .field__input::placeholder{
