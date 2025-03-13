@@ -1,0 +1,257 @@
+/* ====================================== */
+/* ====================================== */
+/* ====================================== */
+    /* HEADER */
+/* ====================================== */
+/* ====================================== */
+/* ====================================== */
+
+
+.header {
+    font-family: var(--general-font);
+}
+.header__top {
+    padding: 30px 73px 0;
+}
+.header__top-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.header__top-logo {
+    max-width: 170px;
+}
+
+.header__top-logo img {
+    width: 100%;
+}
+
+.header__top-nav {
+    
+}
+.header__top-nav-list {
+    display: flex;
+    gap: 33px;
+}
+
+.header__top-nav-list > *:nth-child(2) { 
+    display: flex; 
+    align-items: center; 
+}
+
+.header__top-nav-list > *:nth-child(2) img {
+    padding: 1.5px 0 0 7px; 
+    cursor: pointer;
+}
+
+.header__top-nav-item {
+}
+
+.header__top-nav-link {
+    display: flex;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 5px 0;
+}
+.header__top-links {
+    display: flex;
+    gap: 13px;
+}
+.header__top-link {
+    width: 24px;
+}
+
+/* === */
+.header__hero {
+    margin-top: 60px;
+}
+.hero {
+}
+
+.hero__inner {
+    position: relative;
+    width: 100%;
+
+}
+.hero__next,
+.hero__prev {
+    cursor: pointer;
+    background: transparent;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: #dce5e2;
+}
+
+.hero__nav {
+    position: relative;
+}
+
+.hero__prev {
+    position: absolute;
+    top: 263px;
+    left: 0;
+}
+
+.hero__next {
+    position: absolute;
+    top: 263px;
+    right: 0;
+}
+.hero__swiper {
+    overflow: visible;
+}
+.swiper {
+}
+.hero__wrapper {
+}
+.swiper-wrapper {
+    padding: 0;
+
+}
+.hero__slide {
+    /* max-width: 1294px; */
+    width: 100%;
+    max-height: 550px;
+    background: #dce5e2;
+    border-radius: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.swiper-slide-prev.hero__slide {
+    opacity: 0.5;
+}
+.swiper-slide-next.hero__slide {
+    opacity: 0.5;
+}
+
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 56px;
+}
+
+.hero__title {
+    max-width: 588px;
+    width: 100%;
+    font-size: 58px;
+    font-weight: 500;
+    line-height: 69.6px;
+    text-align: left;
+    margin-bottom: 19px;
+}
+
+.hero__text {
+    max-width: 565px;
+    margin-bottom: 30px;
+}
+
+.hero__button{
+    /* justify-content: start;
+    align-items: start; */
+}
+
+.hero__img {
+    max-width: 647px;
+}
+.hero__img img{
+    width: 100%;
+}
+
+/* .hero__decoration{
+    position: absolute;
+} */
+
+.hero__decor{
+    width: 194px;
+    height: 2px;
+    background-color: var(--general-text);
+    gap: 34px;
+    position: relative;
+    right: -43%;
+    top: -33px;
+}
+
+.hero__decor::after{
+    content: '';
+    position: absolute;
+    width: 194px;
+    height: 2px;
+    background-color: var(--general-text);
+    left: 119%;
+    top: 0;
+}
+.hero__decor::before{
+    content: '';
+    position: absolute;
+    width: 194px;
+    height: 2px;
+    background-color: var(--general-text);
+    right: 119%;
+    bottom: 0;
+}
+
+/* === */
+
+
+.burger-icon {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 11;
+    opacity: 0;
+}
+
+.burger-icon span,
+.burger-icon span::after,
+.burger-icon span::before {
+    display: block;
+    width: 25px;
+    height: 3px;
+    border-radius: 20%;
+    background-color: var(--general-text);
+}
+
+.burger-icon span::after,
+.burger-icon span::before {
+    content: "";
+    position: absolute;
+}
+
+.burger-icon span::after {
+    content: "";
+    top: -8px;
+}
+.burger-icon span::before {
+    content: "";
+    bottom: -8px;
+}
+
+.burger-icon span {
+    position: relative;
+} 
+
+.body--menu-is-opened .burger-icon span::after {
+    content: "";
+    top: 0px;
+    transform: rotate(45deg);
+}
+
+.body--menu-is-opened .burger-icon span::before {
+    content: "";
+    bottom: 0px;
+    transform: rotate(-45deg);
+}
+
+.body--menu-is-opened .burger-icon span {
+    background: transparent;
+}
