@@ -1,0 +1,30 @@
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    border-bottom: 1px solid #d3cbd9;
+    gap: 10px;
+}
+.phone-info {
+    text-align: right;
+}
+
+.phone-info p {
+    margin-bottom: 8px;
+}
+.phone-info a {
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: none;
+    color: #2c332f;
+    transition: color .2s;
+}
+
+.phone-info a:hover{
+    color: #3596ed;
+}
+
+.header-logo-icon {}
