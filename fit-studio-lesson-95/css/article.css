@@ -1,0 +1,198 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.article {
+  padding-top: 80px;
+  padding-bottom: 120px;
+}
+
+.new-felial,
+.groups,
+.article-texts {
+  margin-bottom: 80px;
+}
+
+.new-felial,
+.veiw-of-filial {
+  position: relative;
+}
+
+.new-felial.decor::after {
+  top: 455px;
+  left: 0;
+}
+
+.veiw-of-filial.decor::after {
+  bottom: 197px;
+  right: 0;
+}
+
+
+.article-title-medium {
+  font-size: 36px;
+}
+
+.article-text {
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: #535755;
+}
+
+.article-text:last-child {
+  margin-bottom: 0;
+}
+
+.article-mb-2 {
+  margin-bottom: 40px;
+}
+
+.article-decor-wrapper-1,
+.article-decor-wrapper-2 {
+  position: relative;
+}
+
+.article-img,
+.article-video {
+  max-width: 100%;
+}
+
+.article-list {
+  margin-top: 0;
+  padding-left: 16px;
+}
+
+.article-item:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.article-item::marker {
+  font-size: 22px;
+  color: #3596ed;
+}
+
+.article-play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  background-color: #3596ed;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s;
+  -o-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+
+.article-play-button:hover {
+  background-color: #38a2ff;
+}
+
+.article-play-button:not(:disabled):active {
+  background-color: #2d82cd;
+}
+
+/* ======================MRDIA======================= */
+
+@media(width < 1324px) {
+
+  .veiw-of-filial.decor::after,
+  .new-felial.decor::after {
+    display: none;
+  }
+}
+
+@media (width <= 992px) {
+
+  .new-felial,
+  .groups {
+    margin-bottom: 70px;
+  }
+
+  .article-texts {
+    margin-bottom: 40px;
+  }
+
+  .article {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+
+@media (width <= 768px) {
+
+  .new-felial,
+  .groups {
+    margin-bottom: 57px;
+  }
+
+  .article-texts {
+    margin-bottom: 40px;
+  }
+
+  .article {
+    padding-top: 57px;
+    padding-bottom: 57px;
+  }
+}
+
+@media(width <= 576px) {
+
+  .title-large {
+    font-size: 38px;
+  }
+
+  .article-title-medium {
+    font-size: 34px;
+  }
+
+  .article-play-button {
+    width: 45px;
+    height: 45px;
+  }
+  .article-play-button img {
+    width: 18px;
+    height: 21px;
+  }
+}
+@media (width <= 376px) {
+
+  .new-felial,
+  .groups {
+    margin-bottom: 40px;
+  }
+
+  .article-texts {
+    margin-bottom: 30px;
+  }
+
+  .article {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .article-title-medium {
+    margin-bottom: 30px;
+    font-size: 31px;
+  }
+  
+}

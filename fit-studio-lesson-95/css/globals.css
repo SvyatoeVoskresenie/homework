@@ -1,0 +1,185 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+html {
+  font-family: Ubuntu, sans-serif;
+  font-weight: 400;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 375px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  outline: 1px solid red;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+a,
+button {
+  outline: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid #3596ed;
+  outline-offset: 1px;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: #535755;
+}
+
+.button {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 130%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  background-color: #3596ed;
+  padding: 19px 32px;
+  -webkit-transition: opacity .2s, background-color .2s;
+  -o-transition: opacity .2s, background-color .2s;
+  transition: opacity .2s, background-color .2s;
+}
+
+.button:hover {
+  opacity: .85;
+}
+
+.button:not(:disabled):active {
+  background-color: #2a7ac0;
+}
+
+button.button:disabled {
+  cursor: default;
+  opacity: .65;
+}
+
+.title-large {
+  max-width: 596px;
+  margin-bottom: 40px;
+  font-family: Oswald, sans-serif;
+  font-weight: 600;
+  line-height: 115%;
+  text-transform: uppercase;
+  color: #2c332f;
+  font-size: 48px;
+}
+
+.title-medium {
+  font-family: Oswald, sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 115%;
+  text-transform: uppercase;
+}
+
+.article-title-medium {
+  font-size: 36px;
+}
+
+.section {
+  margin-bottom: 140px;
+}
+
+.text-sub {
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-family: "Ubuntu", sans-serif;
+  color: #858e8a;
+}
+
+.decor::after {
+  content: "";
+  display: block;
+  background: url(../images/decor-latge-icon.svg) repeat;
+  position: absolute;
+  width: calc(42% - 10px);
+  height: 48px;
+  z-index: -1;
+}
+
+@media (width <=992px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .section {
+    margin-bottom: 70px;
+  }
+}
+
+@media (width <=768px) {
+  .section {
+    margin-bottom: 65px;
+  }
+
+  .title-large {
+    font-size: 41px;
+  }
+}
+
+@media (width <=576px) {
+  .container {
+    max-width: 500px;
+  }
+
+}
+
+@media (width <=420px) {
+  .section {
+    margin-bottom: 80px;
+  }
+}
