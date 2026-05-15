@@ -9,7 +9,7 @@
       type="image/x-icon"
       href="./icons/nike-favicon-48x48.ico"
     />
-    <script defer src="./js/index.js" type="module"></script>
+    <script src="./js/index.js" type="module"></script>
     <title>Nike Air Mag</title>
   </head>
   <body class="page__body">
@@ -95,5 +95,36 @@
         </div>
       </div>
     </header>
+    <main class="main">
+      <section class="hero">
+        <div class="container hero__container">
+          <div class="hero__header">
+            <ul class="hero__benefits-list">
+              <li class="hero__benefits-item">стиль</li>
+              <li class="hero__benefits-item">cкорость</li>
+            </ul>
+            <h1 class="hero__title">
+              Nike <span class="hero__title-accent">air</span> mag
+            </h1>
+            <img
+              class="hero__img"
+              src="./img/nike-air-mag-1.png"
+              alt="Белый кроссовок Nike air mag с светящимся жёлтым кругом под подошвой"
+            />
+          </div>
+          <div class="hero__footer">
+            <a class="hero__details" href="#"
+              >Подробнее
+              <svg width="13" height="11">
+                <use
+                  class="hero__details-icon"
+                  href="./icons/main-sprite.svg#double-arrow-right"
+                ></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

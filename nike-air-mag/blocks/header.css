@@ -3,9 +3,10 @@
   top: 0;
   right: 0;
   left: 0;
-  background-color: var(--bg-color);
   padding-block: 32px;
   transition: box-shadow var(--transition-time);
+  z-index: var(--layer-1);
+  background-color: var(--bg-color);
 }
 .header--fixed {
   box-shadow: -2px 0 20px 0 var(--shadow-color);
@@ -13,9 +14,16 @@
 .header__container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-.header__menu {
-  flex-grow: 1;
+ @media (width > 768px) {
+  .header__menu {
+    flex-grow: 1;
+  }
+  /* min 992px max 1440px */
+  .header__logo {
+    margin-right: clamp(25px, -11.585rem + 21.21vw, 120px);
+  }
 }
 
 @media (width <= 768px) {
@@ -46,13 +54,18 @@
     text-align: end;
   }
 }
-@media (width > 768px) {
-  .header__menu {
-    flex-grow: 1;
+.header__controls {
+  display: flex;
+  align-items: center;
+}
+@media (width > 992px) {
+  .header__controls {
+    gap: 60px;
   }
-  /* min 992px max 1440px */
-  .header__logo {
-    margin-right: clamp(25px, -11.585rem + 21.21vw, 120px);
+}
+@media (width <= 992px) {
+  .header__controls {
+    gap: 30px;
   }
 }
 .header__order {
@@ -63,6 +76,12 @@
   color: var(--accent-color);
   padding-bottom: 5px;
   border-bottom: 1px solid var(--accent-color);
+}
+@media (any-hover: hover) {
+  .header__order:hover::before {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 .header__order::before {
   content: "";
@@ -79,28 +98,10 @@
   visibility: hidden;
   transition: var(--transition-time);
 }
-@media (any-hover: hover) {
-  .header__order:hover::before {
-    opacity: 1;
-    visibility: visible;
-  }
-}
-.header__controls {
-  display: flex;
-}
-@media (width > 992px) {
-  .header__controls {
-    gap: 60px;
-  }
-}
-@media (width <= 992px) {
-  .header__controls {
-    gap: 30px;
-  }
-}
+
+
 .header__actions {
   display: flex;
-  gap: 20px;
 }
 @media (width > 768px) {
   .header__actions {
@@ -121,14 +122,15 @@
   transition: color var(--transition-time);
   color: var(--main-color);
 }
+.header__actions-button:active{
+  color: var(--accent-color);
+}
 .header__actions-icon {
   stroke: currentColor;
 }
+
 @media (any-hover: hover) {
   .header__actions-button:hover {
-    color: var(--accent-color);
-  }
-  .header__actions-button:active {
     color: var(--accent-color);
   }
 }
