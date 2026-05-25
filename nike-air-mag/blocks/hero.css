@@ -45,6 +45,7 @@
     left: 0; 
   }
 }
+
 .hero__benefits-item {
   font-weight: 400;
   line-height: 130%;
@@ -113,6 +114,11 @@
 @media (width <= 445px) {
   .hero__footer {
     padding-bottom: 45px;
+  }
+}
+@media (width <= 375px) {
+  .hero__footer {
+    padding-bottom: 21px;
   }
 }
 .hero__details {
