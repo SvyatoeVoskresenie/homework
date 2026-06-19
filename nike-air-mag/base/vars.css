@@ -4,21 +4,32 @@
 
   /* colors  */
   --main-color: #fff;
+  --main-shadow-color: #ffffff48;
   --accent-color: #ffea00;
-  --bg-color: #2a2a29; 
+  --accent-shadow-color: #ffea0048;
+  --bg-color: #2a2a29;
   --secondary-color: #c9c69b;
-  --disable-color: #5d5d56;
+  --disabled-color: #5d5d56;
+  --disabled-shadow-color: #5d5d5648;
   --shadow-color: #181817;
+
+  /* shadow  */
+  --main-glow-shadow: 0 0 4px 2px var(--main-shadow-color);
+  --accent-glow-shadow: 0 0 4px 2px var(--accent-shadow-color);
+  --disabled-glow-shadow: 0 0 4px 2px var(--disabled-shadow-color);
+
+  --accent-glow: 0 0 30px 5px var(--accent-shadow-color);
 
   /* container  */
   --container-width: 1240px;
   --container-padding: 15px;
 
   /* transitions */
-  --transition-time: .3s;
+  --transition-time: 0.3s;
 
   /* layers */
   --layer-negative: -1;
+  --layer-0: 0;
   --layer-1: 1;
   --layer-2: 2;
   --layer-3: 3;
