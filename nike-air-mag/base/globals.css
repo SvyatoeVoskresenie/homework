@@ -58,6 +58,7 @@ button:focus-visible {
 .text-regular {
   font-weight: 400;
 }
+.title-xs,
 .title-sm,
 .title-md {
   font-weight: 600;
@@ -71,6 +72,9 @@ button:focus-visible {
 .title-sm {
   /* min 375px max 996px */
   font-size: clamp(24px, 1.198rem + 1.29vw, 32px);
+}
+.title-xs {
+  font-size: 18px;
 }
 
 /* .main {

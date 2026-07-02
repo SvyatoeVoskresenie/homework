@@ -1,0 +1,92 @@
+.characteristics__video-wrapper {
+    position: relative;
+}
+@media (width > 576px) {
+    .characteristics__video-wrapper {
+        margin-bottom: 60px;
+    }
+}
+@media (width <=576px) {
+    .characteristics__video-wrapper {
+        margin-bottom: 40px;
+    }
+}
+.characteristics__video-preview {
+    border: 1px solid var(--main-color);
+    border-radius: 12px;
+    overflow: hidden;
+}
+.characteristics__video-play-link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--overlay-color);
+    border: 1px solid var(--main-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--main-glow-shadow), var(--main-glow-shadow);
+    transition: border-color var(--transition-time) ease, box-shadow var(--transition-time) ease;
+}
+@media (any-hover: hover) {
+    .characteristics__video-play-link:hover {
+        border-color: var(--accent-color);
+        box-shadow:
+            var(--accent-glow-shadow),
+            inset var(--accent-glow-shadow);
+    }
+}
+.characteristics__video-play-icon {
+    transform: translateX(2px);
+}
+@media (width > 576px) {
+    .characteristics__video-play-link {
+        width: 80px;
+        height: 80px;
+    }
+    .characteristics__video-play-icon {
+        width: 17px;
+        height: 23px;
+    }
+}
+@media (width <=576px) {
+    .characteristics__video-play-link {
+        width: 48px;
+        height: 48px;
+    }
+    .characteristics__video-play-icon {
+        width: 10px;
+        height: 12px;
+    }
+}
+.characteristics__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
+    gap: 40px 20px;
+}
+.characteristics__card-icon {
+    transform: translateX(-8px);
+    margin-bottom: 4px;
+}
+@media (width > 576px){
+    .characteristics__card-icon{
+        width: 56px;
+        height: 56px;
+    }
+}
+@media (width <= 576px){
+    .characteristics__card-icon{
+        width: 48px;
+        height: 48px;
+    }
+}
+.characteristics__card-title {
+    margin-bottom: 20px;
+}
+.characteristics__card-description {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 140%;
+}
