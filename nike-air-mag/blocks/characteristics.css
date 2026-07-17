@@ -20,26 +20,43 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: var(--overlay-color);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    background-color: #2a2a2980;
     border: 1px solid var(--main-color);
     border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: var(--main-glow-shadow), var(--main-glow-shadow);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-shadow: var(--main-glow-shadow), var(--main-glow-shadow);
+            box-shadow: var(--main-glow-shadow), var(--main-glow-shadow);
+    -webkit-transition: border-color var(--transition-time) ease, -webkit-box-shadow var(--transition-time) ease;
+    transition: border-color var(--transition-time) ease, -webkit-box-shadow var(--transition-time) ease;
     transition: border-color var(--transition-time) ease, box-shadow var(--transition-time) ease;
+    transition: border-color var(--transition-time) ease, box-shadow var(--transition-time) ease, -webkit-box-shadow var(--transition-time) ease;
 }
 @media (any-hover: hover) {
     .characteristics__video-play-link:hover {
         border-color: var(--accent-color);
-        box-shadow:
+        -webkit-box-shadow:
+            var(--accent-glow-shadow),
+            inset var(--accent-glow-shadow);
+                box-shadow:
             var(--accent-glow-shadow),
             inset var(--accent-glow-shadow);
     }
 }
 .characteristics__video-play-icon {
-    transform: translateX(2px);
+    -webkit-transform: translateX(2px);
+        -ms-transform: translateX(2px);
+            transform: translateX(2px);
 }
 @media (width > 576px) {
     .characteristics__video-play-link {
@@ -62,12 +79,15 @@
     }
 }
 .characteristics__list {
+    display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
     gap: 40px 20px;
 }
 .characteristics__card-icon {
-    transform: translateX(-8px);
+    -webkit-transform: translateX(-8px);
+        -ms-transform: translateX(-8px);
+            transform: translateX(-8px);
     margin-bottom: 4px;
 }
 @media (width > 576px){

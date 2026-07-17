@@ -2,7 +2,10 @@
   border: 2px solid var(--accent-color);
   border-radius: 12px;
   margin-bottom: 60px;
-  box-shadow:
+  -webkit-box-shadow:
+    var(--accent-glow),
+    inset var(--accent-glow);
+          box-shadow:
     var(--accent-glow),
     inset var(--accent-glow);
   position: relative;
@@ -20,9 +23,15 @@
   }
 }
 .product__slide-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media (width <= 768px) {
   .product__slide-img {
@@ -35,12 +44,14 @@
   width: 40px;
   height: 40px;
   color: var(--main-color);
+  -webkit-transition: color var(--transition-time);
   transition: color var(--transition-time);
 
   position: absolute;
   z-index: var(--layer-2);
   top: 45%;
-  transform: rotateY(-50%);
+  -webkit-transform: rotateY(-50%);
+          transform: rotateY(-50%);
 }
 @media (any-hover: hover) {
   .product__slider-button:hover {
@@ -51,11 +62,15 @@
 @media (width > 768px) {
   .product__slider-button--prev {
     left: 0;
-    transform: translateX(35px);
+    -webkit-transform: translateX(35px);
+        -ms-transform: translateX(35px);
+            transform: translateX(35px);
   }
   .product__slider-button--next {
     right: 0;
-    transform: translateX(-35px);
+    -webkit-transform: translateX(-35px);
+        -ms-transform: translateX(-35px);
+            transform: translateX(-35px);
   }
 }
 @media (width <= 768px) {
@@ -79,6 +94,8 @@
   margin-block: 40px;
 }
 .product__sizes-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 @media (width > 996px) {
@@ -93,11 +110,16 @@
 }
 @media (width <= 576px) {
   .product__sizes-wrapper {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 .product__sizes {
-  flex: 1 1 50%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
 }
 .product__sizes-title,
 .product__sizes-button {
@@ -129,30 +151,55 @@
 }
 
 .product__sizes-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 10px;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: 40px;
 }
 .product__sizes-button {
   width: 60px;
   height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: 1px solid var(--main-color);
   border-radius: 12px;
-  box-shadow:
+  -webkit-box-shadow:
     var(--main-glow-shadow),
     inset var(--main-glow-shadow);
+          box-shadow:
+    var(--main-glow-shadow),
+    inset var(--main-glow-shadow);
+  -webkit-transition:
+    border-color var(--transition-time),
+    -webkit-box-shadow var(--transition-time);
+  transition:
+    border-color var(--transition-time),
+    -webkit-box-shadow var(--transition-time);
   transition:
     border-color var(--transition-time),
     box-shadow var(--transition-time);
+  transition:
+    border-color var(--transition-time),
+    box-shadow var(--transition-time),
+    -webkit-box-shadow var(--transition-time);
 }
 @media (any-hover: hover) {
   .product__sizes-button:hover {
     border-color: var(--accent-color);
-    box-shadow:
+    -webkit-box-shadow:
+      var(--accent-glow-shadow),
+      inset var(--accent-glow-shadow);
+            box-shadow:
       var(--accent-glow-shadow),
       inset var(--accent-glow-shadow);
   }
@@ -160,22 +207,32 @@
 .product__sizes-button--active {
   color: var(--accent-color);
   border-color: var(--accent-color);
-  box-shadow:
+  -webkit-box-shadow:
+    var(--accent-glow-shadow),
+    inset var(--accent-glow-shadow);
+          box-shadow:
     var(--accent-glow-shadow),
     inset var(--accent-glow-shadow);
 }
 .product__sizes-button:disabled {
   color: var(--disabled-color);
   border-color: var(--disabled-color);
-  box-shadow:
+  -webkit-box-shadow:
+    var(--disabled-glow-shadow),
+    inset var(--disabled-glow-shadow);
+          box-shadow:
     var(--disabled-glow-shadow),
     inset var(--disabled-glow-shadow);
   cursor: not-allowed;
 }
 
 .product__buy-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 10px;
 }
 .product__buy-button {
@@ -189,7 +246,10 @@
   padding: 19px 38px;
   background-color: var(--accent-color);
   border-radius: 4px;
+  -webkit-transition: -webkit-box-shadow var(--transition-time);
+  transition: -webkit-box-shadow var(--transition-time);
   transition: box-shadow var(--transition-time);
+  transition: box-shadow var(--transition-time), -webkit-box-shadow var(--transition-time);
 }
 
 @media (width <= 708px) {
@@ -214,13 +274,18 @@
   border-radius: 4px;
   width: 59px;
   height: 59px;
+  -webkit-transition: -webkit-box-shadow var(--transition-time);
+  transition: -webkit-box-shadow var(--transition-time);
   transition: box-shadow var(--transition-time);
-  flex-shrink: 0;
+  transition: box-shadow var(--transition-time), -webkit-box-shadow var(--transition-time);
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 @media (any-hover: hover) {
   .product__buy-button:hover,
   .product__cart-button:hover {
-    box-shadow: 0 0 12px 0 rgba(255, 234, 0, 0.8);
+    -webkit-box-shadow: 0 0 12px 0 rgba(255, 234, 0, 0.8);
+            box-shadow: 0 0 12px 0 rgba(255, 234, 0, 0.8);
   }
 }
 .product__order-link {
@@ -231,6 +296,9 @@
   color: var(--main-color);
   border-bottom: 1px solid var(--main-color);
   padding-bottom: 5px;
+  -webkit-transition:
+    color var(--transition-time),
+    border-color var(--transition-time);
   transition:
     color var(--transition-time),
     border-color var(--transition-time);
