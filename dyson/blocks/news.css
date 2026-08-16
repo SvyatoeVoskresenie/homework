@@ -1,0 +1,126 @@
+.news {
+    background: var(--bg-color);
+}
+.news__title {
+    padding-bottom: 70px;
+}
+@media (width <= 1200px) {
+    .news__title {
+        padding-bottom: 59px;
+    }
+}
+@media (width <= 992px) {
+    .news__title {
+        padding-bottom: 40px;
+    }
+}
+@media (width <= 768px) {
+    .news__title {
+        padding-bottom: 30px;
+    }
+}
+.news__inner {
+    display: flex;
+    gap: 20px;
+}
+@media (width <= 390px) {
+    .news__inner {
+        gap: 10px;
+    }
+}
+.news__article {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+@media (width <= 390px) {
+    .news__article--disappear {
+        display: none;
+        visibility: hidden;
+    }
+}
+@media (width <= 768px) {
+    .news__article {
+        gap: 10px;
+    }
+}
+@media (width <= 390px) {
+    .news__article {
+        gap: 6px;
+    }
+}
+.news__header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+@media (width <= 768px) {
+    .news__header {
+        gap: 12px;
+    }
+}
+@media (width <= 390px) {
+    .news__header {
+        gap: 10px;
+    }
+}
+.news__header-img {
+    border-radius: 3px;
+}
+.news__header-date {
+    font-size: 18px;
+line-height: 150%;
+color: var(--date-color);
+}
+@media (width <= 768px) {
+    .news__header-date {
+        font-size: 12px;
+    }
+}
+.news__footer-title {
+font-weight: 600;
+font-size: 20px;
+line-height: 120%;
+margin-bottom: 15px;
+}
+@media (width <= 768px) {
+    .news__footer-title {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+}
+@media (width <= 768px) {
+    .news__footer-title {
+        font-size: 12px;
+    }
+}
+.news__footer-text {
+    font-size: 18px;
+line-height: 120%;
+    margin-bottom: 20px;
+}
+@media (width <= 768px) {
+    .news__footer-text {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+}
+@media (width <= 390px) {
+    .news__footer-text {
+        font-size: 10px;
+        margin-bottom: 6px;
+    }
+}
+.news__footer-link {
+    font-weight: 400;
+font-size: 18px;
+color: var(--accent-color);
+text-decoration: underline;
+text-underline-offset: var(--t-u-offset-main);
+}
+@media (width <= 768px) {
+    .news__footer-link {
+        font-size: 12px;
+        text-underline-offset: var(--t-u-offset-adaptive);
+    }
+}

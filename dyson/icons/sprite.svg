@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="burger" width="50" height="50" viewBox="0 0 50 50">
+    <path d="M10.4167 14.582H39.5834" stroke="currentColor" stroke-width="2.58934"
+      stroke-linecap="round"
+      stroke-linejoin="round" />
+    <path d="M10.4167 25H39.5834" stroke="currentColor" stroke-width="2.58934"
+      stroke-linecap="round"
+      stroke-linejoin="round" />
+    <path d="M10.4167 35.416H39.5834" stroke="currentColor" stroke-width="2.58934"
+      stroke-linecap="round"
+      stroke-linejoin="round" />
+  </symbol>
+  <symbol id="cart" width="36" height="36" viewBox="0 0 36 36" fill="none">
+    <path
+      d="M4.5 13.5C4.5 11.8431 5.84314 10.5 7.5 10.5H28.5C30.1569 10.5 31.5 11.8431 31.5 13.5V30C31.5 31.6569 30.1569 33 28.5 33H7.5C5.84314 33 4.5 31.6569 4.5 30V13.5Z"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M12 15V9C12 5.68629 14.6863 3 18 3C21.3137 3 24 5.68629 24 9V14.5332"
+      stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  </symbol>
+  <symbol id="right-arrow" width="24" height="24" viewBox="0 0 34 34" stroke="currentColor">
+    <g clip-path="url(#clip0_12087_231)">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M27.2237 18.0372L3.03236 17.8319C2.58011 17.828 2.21793 17.4559 2.22643 17.0037C2.2348 16.558 2.60044 16.2022 3.04616 16.206L27.3725 16.4124L18.0366 6.40095C17.7287 6.07079 17.7468 5.55357 18.077 5.2457C18.4071 4.93783 18.9243 4.95589 19.2322 5.28604L29.7307 16.5443C30.1074 16.9482 30.0853 17.581 29.6814 17.9577L17.7599 29.0746C17.4332 29.3793 16.9213 29.3614 16.6165 29.0346C16.3118 28.7079 16.3297 28.196 16.6565 27.8912L27.2237 18.0372Z"
+        fill="#111111" />
+    </g>
+    <defs>
+      <clipPath id="clip0_12087_231">
+        <rect width="24" height="24" stroke="currentColor" transform="translate(0 16.9706) rotate(-45)" />
+      </clipPath>
+    </defs>
+  </symbol>
+  <symbol id="cross" width="24" height="24" viewBox="0 0 24 24" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 6L6 18M6 6L18 18" stroke="#C9C69B" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round" />
+  </symbol>
+  <symbol id="swiper-arrow" width="35" height="30" viewBox="0 0 43 43" fill="none">
+  <g clip-path="url(#clip0_12134_70)">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.80057 22.3831L36.5515 22.056C37.1038 22.05 37.5466 21.5973 37.5405 21.0451C37.5344 20.4928 37.0818 20.0501 36.5296 20.0561L6.63322 20.3848L18.213 8.03258C18.5907 7.62966 18.5703 6.99682 18.1674 6.6191C17.7644 6.24138 17.1316 6.2618 16.7539 6.66472L3.57141 20.7266C3.19369 21.1295 3.21412 21.7623 3.61703 22.14L18.3215 35.925C18.7244 36.3027 19.3573 36.2823 19.735 35.8793C20.1127 35.4764 20.0923 34.8436 19.6894 34.4659L6.80057 22.3831Z" fill="currentColor" />
+  </g>
+  <defs>
+    <clipPath id="clip0_12134_70">
+      <rect width="30" height="30" fill="white" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 42.4265 21.2133)" />
+    </clipPath>
+  </defs>
+</symbol>
+<symbol id="plus" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <path d="M10.0003 19L10.0346 10M10.0003 1L10.0346 10M10.0346 10H19M10.0346 10H0.999999" stroke="#111111" stroke-width="2" stroke-linecap="round" />
+</symbol>
+<symbol id="minus" width="20" height="2" viewBox="0 0 20 2" fill="none">
+  <path d="M19 1H1" stroke-width="2" stroke-linecap="round" />
+</symbol>
+<symbol id="arrow-open" width="17" height="11" viewBox="0 0 17 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M1 4.5L6.5 10L15.5 1" stroke="#C5358C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+</symbol>
+<symbol id="arrow-down" width="26" height="25" viewBox="0 0 26 25" fill="currentColor">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M21.7893 22.3082L0.30817 1.72206C-0.0905732 1.33993 -0.104042 0.706913 0.278087 0.30817C0.660216 -0.0905732 1.29324 -0.104041 1.69198 0.278088L23.2781 20.9648V4.03351C23.2781 3.48122 23.7258 3.03351 24.2781 3.03351C24.8304 3.03351 25.2781 3.48122 25.2781 4.03351V23.3082C25.2781 23.8605 24.8304 24.3082 24.2781 24.3082H4.12253C3.57025 24.3082 3.12253 23.8605 3.12253 23.3082C3.12253 22.7559 3.57025 22.3082 4.12253 22.3082H21.7893Z"/>
+</symbol>
+</svg>

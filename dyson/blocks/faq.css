@@ -1,0 +1,228 @@
+.faq {
+  position: relative;
+  background: var(--bg-color);
+}
+.faq__title {
+  margin-bottom: 59px;
+}
+@media (width <= 768px) {
+  .faq__title {
+    font-size: 26px;
+    margin-bottom: 40px;
+  }
+}
+@media (width <= 390px) {
+  .faq__title {
+    font-size: 20px;
+    margin-bottom: 38px;
+  }
+}
+@media (width <= 390px) {
+    .faq__title-disappear {
+        display: none;
+        visibility: hidden;
+    }
+}
+.faq__container {
+  border-top: 1px solid var(--disabled-color);
+}
+.faq__item {
+  padding-block: 34px;
+  border-bottom: 1px solid var(--disabled-color);
+}
+@media (width <= 768px) {
+  .faq__item {
+    padding-block: 18px;
+  }
+}
+.faq__item[open] .faq__question::after {
+  content: "";
+  display: inline-block;
+  background: url(../icons/faq-cross.svg) no-repeat center / cover;
+  width: 28px;
+  height: 28px;
+}
+@media (width <= 768px) {
+    .faq__item[open] .faq__question::after {
+        width: 23px;
+        height: 23px;
+    }
+}
+@media (width <= 390px) {
+    .faq__item[open] .faq__question::after {
+        width: 20px;
+        height: 20px;
+    }
+}
+.faq__item[open] .faq__question {
+  color: var(--accent-color);
+}
+.faq__question {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;    
+  align-items: center;
+  cursor: pointer;
+  transition: color var(--transition-time);
+  -webkit-transition: color var(--transition-time);
+  -moz-transition: color var(--transition-time);
+  -ms-transition: color var(--transition-time);
+  -o-transition: color var(--transition-time);
+}
+@media (width <= 768px) {
+  .faq__question {
+    font-size: 16px;
+    line-height: 140%;
+  }
+}
+@media (width <= 576px) {
+  .faq__question {
+    font-size: 14px;
+  }
+}
+@media (width <= 390px) {
+  .faq__question {
+    font-size: 13px;
+  }
+}
+@media (width <= 1060px) {
+  .faq__question-text {
+    max-width: 770px;
+  }
+}
+@media (width <= 870px) {
+  .faq__question-text {
+    max-width: 650px;
+  }
+}
+@media (width <= 768px) {
+  .faq__question-text {
+    max-width: 544px;
+  }
+}
+@media (width <= 638px) {
+  .faq__question-text {
+    max-width: 464px;
+  }
+}
+@media (width <= 576px) {
+  .faq__question-text {
+    max-width: 320px;
+  }
+}
+@media (width <= 390px) {
+  .faq__question-text {
+    max-width: 302px;
+  }
+}
+@media (any-hover: hover) {
+  .faq__question:hover {
+    color: var(--accent-color);
+  }
+}
+.faq__question::after {
+  content: "";
+  display: inline-block;
+  background: url(../icons/faq-plus.svg) no-repeat center / cover;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+@media (width <= 768px) {
+  .faq__question::after {
+    width: 29px;
+    height: 30px;
+  }
+}
+@media (width <= 390px) {
+  .faq__question::after {
+    width: 24px;
+    height: 25px;
+  }
+}
+.faq__answer {
+  font-size: 18px;
+  line-height: 150%;
+  padding-block: 50px 16px;
+  max-width: 908px;
+}
+@media (width <= 768px) {
+  .faq__answer {
+    padding-block: 27px 12px;
+    font-size: 14px;
+    max-width: 544px;
+  }
+}
+@media (width <= 390px) {
+  .faq__answer {
+    padding-block: 20px 5px;
+    font-size: 13px;
+    max-width: 320px;
+  }
+}
+/*
+.faq {
+    position: relative;
+}
+
+
+.faq::after {
+    content: "";
+    background: url(../images/decor-latge-icon.svg);
+    position: absolute;
+    width: calc(40% - 10px);
+    height: 48px;
+    top: 215px;
+    z-index: -1;
+}
+
+
+.faq-container {
+    position: relative;
+    display: flex;
+    gap: 28px;
+}
+
+
+details {
+    border-block: 1px solid #d3cbd9;
+    cursor: pointer;
+    margin-bottom: 19px;
+}
+
+
+details[open] summary::after {
+    transform: rotate(180deg);
+}
+
+
+details>p {
+    padding: 0 20px 20px;
+}
+
+
+summary {
+    list-style: none;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+}
+
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+
+summary::after {
+    content: "";
+    display: inline-block;
+    background: url(../images/arrow-down-icon.svg) no-repeat center / cover;
+    width: 17px;
+    height: 22px;
+} */
