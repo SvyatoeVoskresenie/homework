@@ -21,18 +21,18 @@
 }
 .counter__button {
 }
-.counter__button--minus {
+.counter__button--minus, .counter__button--plus {
   color: var(--disabled-color);
 }
 @media (any-hover: hover) {
-  .counter__button--minus:active {
+  .counter__button--minus:active, .counter__button--plus:active {
     color: var(--main-color);
   }
 }
 .counter__button--disabled {
   cursor: not-allowed;
 }
-.counter__button--minus:not(.counter__button--disabled) {
+.counter__button--minus:not(.counter__button--disabled), .counter__button--plus:not(.counter__button--disabled) {
   color: var(--main-color);}
 .counter__value {
   font-weight: 400;
@@ -55,6 +55,7 @@
     -o-transform: translateY(-23%);
   }
   .counter__button--plus {
+  stroke: currentColor;
     transform: translateY(9%);
     -webkit-transform: translateY(9%);
     -moz-transform: translateY(9%);

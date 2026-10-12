@@ -1,5 +1,3 @@
-
-
 export const specialOffersSlider = () => {
   const init = () => {
     const el = document.querySelector(".special-offers__slider");
@@ -16,7 +14,7 @@ export const specialOffersSlider = () => {
         fill: "row",
       },
       loop: false,
-      centeredSlides: false, // Отключаем центрирование
+      centeredSlides: false, 
       centerInsufficientSlides: false,
       watchSlidesProgress: true,
       

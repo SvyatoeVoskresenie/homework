@@ -30,6 +30,7 @@
 
   /* transitions */
   --transition-time: 0.3s;
+  --transition-animation: opacity var(--transition-time), visibility var(--transition-time), display var(--transition-time) ease allow-discrete;
 
   /* layers */
   --layer-negative: -1;

@@ -32,7 +32,7 @@
   </symbol>
   <symbol id="cross" width="24" height="24" viewBox="0 0 24 24" fill="none"
     xmlns="http://www.w3.org/2000/svg">
-    <path d="M18 6L6 18M6 6L18 18" stroke="#C9C69B" stroke-width="2" stroke-linecap="round"
+    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
       stroke-linejoin="round" />
   </symbol>
   <symbol id="swiper-arrow" width="35" height="30" viewBox="0 0 43 43" fill="none">
@@ -46,7 +46,7 @@
   </defs>
 </symbol>
 <symbol id="plus" width="20" height="20" viewBox="0 0 20 20" fill="none">
-  <path d="M10.0003 19L10.0346 10M10.0003 1L10.0346 10M10.0346 10H19M10.0346 10H0.999999" stroke="#111111" stroke-width="2" stroke-linecap="round" />
+  <path d="M10.0003 19L10.0346 10M10.0003 1L10.0346 10M10.0346 10H19M10.0346 10H0.999999" stroke-width="2" stroke-linecap="round" />
 </symbol>
 <symbol id="minus" width="20" height="2" viewBox="0 0 20 2" fill="none">
   <path d="M19 1H1" stroke-width="2" stroke-linecap="round" />
@@ -56,5 +56,8 @@
 </symbol>
 <symbol id="arrow-down" width="26" height="25" viewBox="0 0 26 25" fill="currentColor">
   <path fill-rule="evenodd" clip-rule="evenodd" d="M21.7893 22.3082L0.30817 1.72206C-0.0905732 1.33993 -0.104042 0.706913 0.278087 0.30817C0.660216 -0.0905732 1.29324 -0.104041 1.69198 0.278088L23.2781 20.9648V4.03351C23.2781 3.48122 23.7258 3.03351 24.2781 3.03351C24.8304 3.03351 25.2781 3.48122 25.2781 4.03351V23.3082C25.2781 23.8605 24.8304 24.3082 24.2781 24.3082H4.12253C3.57025 24.3082 3.12253 23.8605 3.12253 23.3082C3.12253 22.7559 3.57025 22.3082 4.12253 22.3082H21.7893Z"/>
+</symbol>
+<symbol id='plus-faq' width="38" height="38" viewBox="0 0 38 38" fill="currentColor" stroke="currentColor">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M20 1C20 0.447715 19.5523 0 19 0C18.4477 0 18 0.447715 18 1V18H1C0.447715 18 0 18.4477 0 19C0 19.5523 0.447715 20 1 20H18V37C18 37.5523 18.4477 38 19 38C19.5523 38 20 37.5523 20 37V20H37C37.5523 20 38 19.5523 38 19C38 18.4477 37.5523 18 37 18H20V1Z"/>
 </symbol>
 </svg>

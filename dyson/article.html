@@ -1,0 +1,265 @@
+<!doctype html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"
+      defer
+    ></script>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./icons/favicon.ico"
+    />
+    <script src="./js/fslightbox.js" type="module"></script>
+    <script src="./js/index.js" type="module"></script>
+    <link rel="stylesheet" href="./index.css" />
+    <title>Dyson</title>
+  </head>
+
+  <body class="page__body">
+    <header class="header">
+      <div class="container">
+        <div class="header__container">
+          <div class="header__inner">
+            <button
+              aria-expanded="false"
+              aria-controls="header__menu"
+              class="header__burger burger"
+            >
+              <svg width="50" height="50">
+                <use
+                  class="burger__icon-menu"
+                  href="./icons/sprite.svg#burger"
+                ></use>
+              </svg>
+            </button>
+            <a class="header__logo" href="#">
+              <img
+                class="header__logo-icon"
+                width="183"
+                height="77"
+                src="./icons/dyson-logo.svg"
+                alt="Логотип компании Dyson"
+              />
+            </a>
+          </div>
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a class="header__nav-link text-pro-tiny" href="#about-us"
+                  >О нас</a
+                >
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link text-pro-tiny" href="#delivery"
+                  >Доставка и оплата</a
+                >
+              </li>
+              <li class="header__nav-item">
+                <a
+                  class="header__nav-link text-pro-tiny"
+                  href="#product-registration"
+                  >Регистрация продукта</a
+                >
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link text-pro-tiny" href="#service"
+                  >Сервис</a
+                >
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link text-pro-tiny" href="#license"
+                  >Сертификаты и лицензии</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <button
+            class="header__action-bt"
+            title="Корзина"
+            aria-label="Корзина"
+          >
+            <svg width="36" height="36">
+              <use
+                class="header__actions-icon"
+                href="./icons/sprite.svg#cart"
+                title="Корзина"
+                aria-label="Корзина"
+              ></use>
+            </svg>
+            <!-- <span class="header__cart-count" data-cart-count>0</span> -->
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="main"></main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <a class="footer__logo" href="#">
+            <img
+              class="footer__logo-icon"
+              width="183"
+              height="77"
+              src="./icons/dyson-logo.svg"
+              alt="Логотип компании Dyson"
+            />
+          </a>
+          <h5 class="footer__main-title footer-title">О компании</h5>
+          <div class="footer__nav footer__nav--first-col">
+            <h5 class="footer__title footer-title">Магазин</h5>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#" class="footer__link">Фены Dyson Supersonic</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Стайлеры Dyson Airwrap</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Выпрямители Dyson Corrale</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Пылесосы</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Климатическая техника</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Освещение</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Аксессуары</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__nav footer__nav--second-col">
+            <h5 class="footer__title footer-title">Общая информация</h5>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#" class="footer__link">Новости </a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Доставка</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Гарантия</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Оплата товара</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Свяжитесь с нами</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Политика конфиденциальности</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Договор оферты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__nav footer__nav--third-col">
+            <h5 class="footer__title footer-title">Акции</h5>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#" class="footer__link">Подарочная коллекция</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Эксклюзивные предложения</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__info">
+            <h5 class="footer-title">Отдел логистики:</h5>
+            <a class="footer__tel footer-title" href="tel:+79998004554"
+              >+7 (999) 800-45-54</a
+            >
+            <div class="footer__socials">
+              <a class="footer__social" href="#">
+                <svg class="footer__icon" viewBox="0 0 40 40">
+                  <use href="./icons/socials.svg#tg"></use>
+                </svg>
+              </a>
+              <a class="footer__social" href="#">
+                <svg class="footer__icon" viewBox="0 0 40 40">
+                  <use href="./icons/socials.svg#vk"></use>
+                </svg>
+              </a>
+              <a class="footer__social" href="#">
+                <svg class="footer__icon" viewBox="0 0 40 40">
+                  <use href="./icons/socials.svg#youtube"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <p class="footer__copyright">
+            Интернет-магазин dysmarket.ru, 2022 © Все права защищены.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <div class="modal">
+      <div class="modal__window modal-review" data-modal-window="buy">
+        <button
+          class="modal__close"
+          aria-label="Закрыть"
+          title="Закрыть"
+          data-modal-close
+        >
+          <svg width="24" height="24">
+            <use href="./icons/sprite.svg#cross"></use>
+          </svg>
+        </button>
+        <div class="modal__content modal-review__content">
+          <h3 class="modal-review__title title-pro-large">Оставить отзыв</h3>
+          <form class="modal-review__form">
+            <label for="name" class="modal-review__label">
+              <input
+                id="name"
+                class="modal-review__input"
+                type="text"
+                placeholder="Ваше имя"
+                name="name"
+                required
+              />
+            </label>
+            <label for="rating" class="model-buy__label">
+              <select
+                id="rating"
+                class="modal-buy__input"
+                name="rating"
+                required
+              >
+                <option value="" disabled selected hidden>Ваша оценка товара</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </label>
+            <label for="review" class="modal-review__label">
+              <textarea
+                id="review"
+                class="modal-review__input "
+                type="tel"
+                placeholder="Оставьте Ваш отзыв здесь"
+                name="review"
+                rows="4"
+                style="resize: none"
+                required
+              ></textarea>
+            </label>
+            <button class="modal-review__submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

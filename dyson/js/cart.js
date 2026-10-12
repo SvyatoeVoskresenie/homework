@@ -1,130 +1,62 @@
-export default class CartManager {
-  constructor({
-    productSelector = ".special-offers__card",
-    addButtonSelector = ".special-offers__card-bt",
-    countSelector = ".counter__value",
-    plusButtonSelector = ".counter__plus",
-    minusButtonSelector = ".counter__minus",
-    minCount = 1,
-    maxCount = 99,
-  } = {}) {
-    this.productSelector = productSelector;
-    this.addButtonSelector = addButtonSelector;
-    this.countSelector = countSelector;
-    this.plusButtonSelector = plusButtonSelector;
-    this.minusButtonSelector = minusButtonSelector;
-    this.minCount = minCount;
-    this.maxCount = maxCount;
+// DOM for cart counter
+import { swiperWrapper } from "./counter.js";
+import {
+  addToCart,
+  cartArr,
+  sumCartQuantity,
+  cartProductKeys,
+} from "./cart-service.js";
 
-    this.cart = [];
+export const cartCount = document.querySelector(".header__action-count");
 
-    this.init();
-  }
+export const createProductInCart = () => {
+  swiperWrapper.addEventListener("click", ({ target }) => {
+    const card = target.closest(".special-offers__card");
+    if (!card) return;
 
-  init() {
-    this.bindAddButtons();
-
-    this.bindCounterButtons();
-
-    this.loadCart();
-
-    console.log('CartManager инициализирован');
-  }
-
-  bindCounterButtons() {
-    document.addEventListener('click', (e) => {
-      const plusButton = e.target.closest(this.plusButtonSelector);
-      const minusButton = e.target.closest(this.minusButtonSelector);
-
-      if (!plusButton && !minusButton) return;
-
-      const card = (plusButton || minusButton).closest(this.productSelector);
-      if (!card) return;
-
-      const counterEl = card.querySelector(this.countSelector);
-      if (!counterEl) return;
-
-      let value = parseInt(counterEl.textContent, 10) || this.minCount;
-
-      if (plusButton) {
-        value = Math.min(value + 1, this.maxCount);
-      } else if (minusButton) {
-        value = Math.max(value - 1, this.minCount);
-      }
-
-      counterEl.textContent = value;
-    });
-  }
-
-  getProductData(card) {
-    const img = card.querySelector(".special-offers__card-img");
-    const title = card.querySelector(".special-offers__card-definition");
-    const price = card.querySelector(".special-offers__card-middle-price");
-    const counter = card.querySelector(this.countSelector);
-
-    const count = counter ? parseInt(counter.textContent, 10) || 1 : 1;
-
-    console.log('📦 Товар:', {
-      title: title ? title.textContent : "Товар",
-      price: price ? price.textContent : "0Р",
-      count: count
-    });
-
-    return {
-      id: Date.now() + Math.random().toString(36).substr(2, 9),
-      img: img ? img.src : "",
-      title: title ? title.textContent : "Товар",
-      price: price ? price.textContent : "0Р",
-      count: count,
-    };
-  }
-
-  addToCart(product) {
-    const existingProduct = this.cart.find(
-      (item) => item.title === product.title && item.price === product.price
-    );
-
-    if (existingProduct) {
-      existingProduct.count += product.count;
-      console.log(`Обновлён товар: ${product.title}, количество: ${existingProduct.count}`);
-    } else {
-      this.cart.push({ ...product });
-      console.log(`Добавлен товар: ${product.title}, количество: ${product.count}`);
+    const btnToCart = target.closest(".special-offers__card-bt");
+    const productValue = card.querySelector(".counter__value").textContent;
+    const productName = card
+      .querySelector(".special-offers__card-definition")
+      .textContent.trim();
+    if (btnToCart) {
+      addToCart(cartArr, productName, Number(productValue));
     }
-
-    localStorage.setItem("cart", JSON.stringify(this.cart));
-  }
-
-  loadCart() {
-    const savedCart = localStorage.getItem("cart");
-    if (savedCart) {
-      try {
-        this.cart = JSON.parse(savedCart);
-        console.log(`Загружена корзина: ${this.cart.length} товаров`);
-      } catch (e) {
-        console.error("Ошибка загрузки корзины:", e);
-      }
+    if (btnToCart && Number(sumCartQuantity(cartArr)) > 0) {
+      cartCount.classList.add("header__action-count--open");
+      cartCount.textContent = `${sumCartQuantity(cartArr)}`;
+    } else if (btnToCart && Number(sumCartQuantity(cartArr)) === 0) {
+      cartCount.classList.remove("header__action-count--open");
     }
-  }
+  });
+};
 
-  clearCart() {
-    this.cart = [];
-    localStorage.removeItem("cart");
-    console.log('Корзина очищена');
-  }
+// DOM for cart modal
+const cartListEl = document.querySelector(".modal-cart__list");
 
-  getCart() {
-    return this.cart;
-  }
+const createCartItem = cartItem => {
+  const cartItemEl = document.createElement("li");
+  cartItemEl.classList.add("modal-cart__item");
+  cartItemEl.dataset.id = cartItem[cartProductKeys.id];
+  if (Number(cartItem[cartProductKeys.quantity] === 0)) return;
+  cartItemEl.innerHTML = `
+  <p class="modal-cart__item-name modal-text">${[cartItem[cartProductKeys.name]]}</p>
+  <p class="modal-cart__item-quantity modal-text">${[cartItem[cartProductKeys.quantity]]}</p>
+  `;
+  return cartItemEl;
+};
 
-  getTotalCount() {
-    return this.cart.reduce((sum, item) => sum + item.count, 0);
-  }
+export const renderCartproducts = cartArr => {
+  cartListEl.classList.add("modal-cart__list--open");
+  cartListEl.innerHTML = "";
+  cartArr.forEach(cartItem => {
+    const cartItemEl = createCartItem(cartItem);
+    if (cartItem) cartListEl.append(cartItemEl);
+  });
+};
 
-  getTotalPrice() {
-    return this.cart.reduce((sum, item) => {
-      const price = parseInt(item.price.replace(/[^\d]/g, ''), 10) || 0;
-      return sum + price * item.count;
-    }, 0);
-  }
-}
+export const handleCartProducts = cartItem => {
+  const cartItemEl = createCartItem(cartItem);
+  cartListEl.append(cartItemEl);
+};
+

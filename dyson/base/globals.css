@@ -95,14 +95,17 @@
     height: 14px;
   }
 }
-
+.link-more {
+  color: var(--secondary-color);
+}
 img {
   object-fit: cover;
   /* z-index: var(--layer-negative); */
 }
 a:focus-visible,
 button:focus-visible,
-input:focus-visible {
+input:focus-visible,
+textarea:focus-visible {
   outline: 1px solid var(--accent-color);
   outline-offset: 2px;
 }
@@ -138,6 +141,24 @@ form {
   }
 }
 
+.modal-text {
+  font-size: 14px;
+  color: var(--main-color);
+}
+@media (width <= 768px) {
+  .modal-text {
+    font-size: 11px;
+  }
+}
+.modal-text-default {
+  font-size: 20px;
+  color: var(--main-color);
+}
+@media (width <= 768px) {
+  .modal-text-default {
+    font-size: 14px;
+  }
+}
 /*FF NAMU */
 .title-pro-medium,
 .title-pro-large,

@@ -1,65 +1,30 @@
-export default class Counter {
-  constructor({
-    counterSelector = ".counter",
-    valueSelector = "[data-counter-value]",
-    minusSelector = ".counter__button--minus",
-    plusSelector = ".counter__button--plus",
-    disabledClass = "counter__button--disabled",
-    min = 1,
-    max = 99,
-  } = {}) {
-    this.valueSelector = valueSelector;
-    this.minusSelector = minusSelector;
-    this.plusSelector = plusSelector;
-    this.disabledClass = disabledClass;
-    this.min = min;
-    this.max = max;
+export const swiperWrapper = document.querySelector(".swiper-wrapper");
 
-    this.counters = document.querySelectorAll(counterSelector);
-    this.init();
-  }
-
-  init() {
-    this.counters.forEach((counter) => this.bindCounter(counter));
-  }
-
-  bindCounter(counter) {
-    const minusBtn = counter.querySelector(this.minusSelector);
-    const plusBtn = counter.querySelector(this.plusSelector);
-    const valueEl = counter.querySelector(this.valueSelector);
-
-    if (!minusBtn || !plusBtn || !valueEl) return;
-
-    this.updateMinusState(minusBtn, this.getValue(valueEl));
-
-    plusBtn.addEventListener("click", () => {
-      const value = this.getValue(valueEl);
-      if (value >= this.max) return;
-
-      const newValue = value + 1;
-      this.setValue(valueEl, newValue);
-      this.updateMinusState(minusBtn, newValue);
-    });
-
-    minusBtn.addEventListener("click", () => {
-      const value = this.getValue(valueEl);
-      if (value <= this.min) return;
-
-      const newValue = value - 1;
-      this.setValue(valueEl, newValue);
-      this.updateMinusState(minusBtn, newValue);
-    });
-  }
-
-  getValue(valueEl) {
-    return parseInt(valueEl.textContent, 10) || 0;
-  }
-
-  setValue(valueEl, value) {
-    valueEl.textContent = value;
-  }
-
-  updateMinusState(minusBtn, value) {
-    minusBtn.classList.toggle(this.disabledClass, value <= this.min);
-  }
-}
+export const clickCounter = () => {
+  swiperWrapper.addEventListener("click", ({ target }) => {
+    const card = target.closest(".special-offers__card");
+    if (!card) return;
+    const btnPlusClicked = target.closest(".counter__button--plus");
+    const btnMinusClicked = target.closest(".counter__button--minus");
+    const btnMinus = card.querySelector(".counter__button--minus");
+    let value = card.querySelector(".counter__value");
+    if (btnPlusClicked && Number(value.textContent) < 99) {
+      value.textContent = `${Number(value.textContent) + 1}`;
+    } else if (btnMinusClicked && Number(value.textContent) > 0) {
+      value.textContent = `${Number(value.textContent) - 1}`;
+    }
+    if (btnMinus) {
+      btnMinus.classList.toggle(
+        "counter__button--disabled",
+        Number(value.textContent) === 0,
+      );
+    }
+    const btnPlus = card.querySelector(".counter__button--plus");
+    if (btnPlus) {
+      btnPlus.classList.toggle(
+        "counter__button--disabled",
+        Number(value.textContent) === 99,
+      );
+    }
+  });
+};

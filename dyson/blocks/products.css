@@ -92,7 +92,7 @@
   }
 }
 .products__card-links {
-  display: flex;
+  display: inline-flex;
   gap: 20px;
   padding-top: 11px;
   padding-left: 40px;

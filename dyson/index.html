@@ -11,11 +11,7 @@
       src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"
       defer
     ></script>
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="./icons/favicon.ico"
-    />
+    <link rel="shortcut icon" type="image/x-icon" href="./icons/favicon.ico" />
     <script src="./js/fslightbox.js" type="module"></script>
     <script src="./js/index.js" type="module"></script>
     <link rel="stylesheet" href="./index.css" />
@@ -37,10 +33,6 @@
                   class="burger__icon-menu"
                   href="./icons/sprite.svg#burger"
                 ></use>
-                <!-- <use
-                  class="burger__icon-cross"
-                  href="./icons/sprite.svg#cross"
-                ></use> -->
               </svg>
             </button>
             <a class="header__logo" href="#">
@@ -88,6 +80,7 @@
             class="header__action-bt"
             title="Корзина"
             aria-label="Корзина"
+            data-modal-button="cart-modal"
           >
             <svg width="36" height="36">
               <use
@@ -97,7 +90,7 @@
                 aria-label="Корзина"
               ></use>
             </svg>
-            <!-- <span class="header__cart-count" data-cart-count>0</span> -->
+            <span class="header__action-count" data-cart-count></span>
           </button>
         </div>
       </div>
@@ -113,7 +106,11 @@
               <p class="hero__text text-regular">
                 Идеальная укладка для всех типов волос вместе с Dyson
               </p>
-              <button class="hero__bt-more">Подробнее</button>
+              <button class="hero__bt-more">
+                <a class="link-more" target="_blank" href="./article.html"
+                  >Подробнее</a
+                >
+              </button>
             </div>
             <picture>
               <source srcset="./img/dyson-girl-1.webp" type="image/webp" />
@@ -149,14 +146,16 @@
               <h3 class="products__card-title text-pro-small">Акции</h3>
               <div class="products__card-links">
                 <a
-                  href="#"
+                  href="./article.html"
+                  target="_blank"
                   class="products__link"
                   title="Узнать подробнее"
                   aria-label="Узнать подробнее"
                   >Подробнее
                 </a>
                 <a
-                  href="#"
+                  href="./article.html"
+                  target="_blank"
                   class="products__link"
                   title="Узнать подробнее"
                   aria-label="Узнать подробнее"
@@ -188,14 +187,16 @@
               <h3 class="products__card-title text-pro-small">Фены</h3>
               <div class="products__card-links">
                 <a
-                  href="#"
+                  href="./article.html"
+                  target="_blank"
                   class="products__link"
                   title="Узнать подробнее"
                   aria-label="Узнать подробнее"
                   >Подробнее
                 </a>
                 <a
-                  href="#"
+                  href="./article.html"
+                  target="_blank"
                   class="products__link"
                   title="Узнать подробнее"
                   aria-label="Узнать подробнее"
@@ -227,7 +228,8 @@
               <h3 class="products__card-title text-pro-small">Стайлеры</h3>
               <div class="products__card-links">
                 <a
-                  href="#"
+                  href="./article.html"
+                  target="_blank"
                   class="products__link"
                   title="Узнать подробнее"
                   aria-label="Узнать подробнее"
@@ -550,7 +552,7 @@
           </div>
         </div>
       </section>
-      <section class="why-us section">
+      <section class="why-us section" id="about-us">
         <div class="container">
           <h2 class="why-us__title title-pro-medium">Почему выбирают нас</h2>
           <div class="why-us__container">
@@ -657,7 +659,7 @@
           </div>
         </div>
       </section>
-      <section class="special-offers section">
+      <section class="special-offers section" id="special-offers">
         <div class="container">
           <h2 class="special-offers__title title-pro-medium">
             Спецпредложения
@@ -1574,7 +1576,7 @@
               <button
                 class="reviews__rating-button"
                 type="button"
-                data-modal-button="buy"
+                data-modal-button="review"
               >
                 Написать отзыв
               </button>
@@ -1729,13 +1731,15 @@
                 </p>
               </summary>
               <p class="faq__answer">
-                Главное отличие фена Dyson в быстром и безопасном высушивании
-                волос. В рукоятку встроен датчик температуры, благодаря которому
-                она не поднимается выше 100 градусов. В комплекте 5 насадок,
-                которые подходят для укладки и сушки на разных режимах. Есть
-                практичный черный чехол, предназначенный для аккуратной
-                перевозки и хранения. Расчески можно использовать отдельно от
-                девайса или во время сушки с целью предотвратить запутывание.
+                <span class="faq__answer-inner">
+                  Главное отличие фена Dyson в быстром и безопасном высушивании
+                  волос. В рукоятку встроен датчик температуры, благодаря которому
+                  она не поднимается выше 100 градусов. В комплекте 5 насадок,
+                  которые подходят для укладки и сушки на разных режимах. Есть
+                  практичный черный чехол, предназначенный для аккуратной
+                  перевозки и хранения. Расчески можно использовать отдельно от
+                  девайса или во время сушки с целью предотвратить запутывание.
+                </span>
               </p>
             </details>
             <details class="faq__item" name="faq">
@@ -1746,13 +1750,15 @@
                 </p>
               </summary>
               <p class="faq__answer">
-                Главное отличие фена Dyson в быстром и безопасном высушивании
-                волос. В рукоятку встроен датчик температуры, благодаря которому
-                она не поднимается выше 100 градусов. В комплекте 5 насадок,
-                которые подходят для укладки и сушки на разных режимах. Есть
-                практичный черный чехол, предназначенный для аккуратной
-                перевозки и хранения. Расчески можно использовать отдельно от
-                девайса или во время сушки с целью предотвратить запутывание.
+                <span class="faq__answer-inner">
+                  Главное отличие фена Dyson в быстром и безопасном высушивании
+                  волос. В рукоятку встроен датчик температуры, благодаря которому
+                  она не поднимается выше 100 градусов. В комплекте 5 насадок,
+                  которые подходят для укладки и сушки на разных режимах. Есть
+                  практичный черный чехол, предназначенный для аккуратной
+                  перевозки и хранения. Расчески можно использовать отдельно от
+                  девайса или во время сушки с целью предотвратить запутывание.
+                </span>
               </p>
             </details>
             <details class="faq__item" name="faq">
@@ -1763,13 +1769,15 @@
                 </p>
               </summary>
               <p class="faq__answer">
-                Главное отличие фена Dyson в быстром и безопасном высушивании
-                волос. В рукоятку встроен датчик температуры, благодаря которому
-                она не поднимается выше 100 градусов. В комплекте 5 насадок,
-                которые подходят для укладки и сушки на разных режимах. Есть
-                практичный черный чехол, предназначенный для аккуратной
-                перевозки и хранения. Расчески можно использовать отдельно от
-                девайса или во время сушки с целью предотвратить запутывание.
+                <span class="faq__answer-inner">
+                  Главное отличие фена Dyson в быстром и безопасном высушивании
+                  волос. В рукоятку встроен датчик температуры, благодаря которому
+                  она не поднимается выше 100 градусов. В комплекте 5 насадок,
+                  которые подходят для укладки и сушки на разных режимах. Есть
+                  практичный черный чехол, предназначенный для аккуратной
+                  перевозки и хранения. Расчески можно использовать отдельно от
+                  девайса или во время сушки с целью предотвратить запутывание.
+                </span>
               </p>
             </details>
             <details class="faq__item" name="faq">
@@ -1780,13 +1788,15 @@
                 </p>
               </summary>
               <p class="faq__answer">
-                Главное отличие фена Dyson в быстром и безопасном высушивании
-                волос. В рукоятку встроен датчик температуры, благодаря которому
-                она не поднимается выше 100 градусов. В комплекте 5 насадок,
-                которые подходят для укладки и сушки на разных режимах. Есть
-                практичный черный чехол, предназначенный для аккуратной
-                перевозки и хранения. Расчески можно использовать отдельно от
-                девайса или во время сушки с целью предотвратить запутывание.
+                <span class="faq__answer-inner">
+                  Главное отличие фена Dyson в быстром и безопасном высушивании
+                  волос. В рукоятку встроен датчик температуры, благодаря которому
+                  она не поднимается выше 100 градусов. В комплекте 5 насадок,
+                  которые подходят для укладки и сушки на разных режимах. Есть
+                  практичный черный чехол, предназначенный для аккуратной
+                  перевозки и хранения. Расчески можно использовать отдельно от
+                  девайса или во время сушки с целью предотвратить запутывание.
+                </span>
               </p>
             </details>
             <details class="faq__item" name="faq">
@@ -1797,13 +1807,15 @@
                 </p>
               </summary>
               <p class="faq__answer">
-                Главное отличие фена Dyson в быстром и безопасном высушивании
-                волос. В рукоятку встроен датчик температуры, благодаря которому
-                она не поднимается выше 100 градусов. В комплекте 5 насадок,
-                которые подходят для укладки и сушки на разных режимах. Есть
-                практичный черный чехол, предназначенный для аккуратной
-                перевозки и хранения. Расчески можно использовать отдельно от
-                девайса или во время сушки с целью предотвратить запутывание.
+                <span class="faq__answer-inner">
+                  Главное отличие фена Dyson в быстром и безопасном высушивании
+                  волос. В рукоятку встроен датчик температуры, благодаря которому
+                  она не поднимается выше 100 градусов. В комплекте 5 насадок,
+                  которые подходят для укладки и сушки на разных режимах. Есть
+                  практичный черный чехол, предназначенный для аккуратной
+                  перевозки и хранения. Расчески можно использовать отдельно от
+                  девайса или во время сушки с целью предотвратить запутывание.
+                </span>
               </p>
             </details>
             <details class="faq__item" name="faq">
@@ -1814,13 +1826,15 @@
                 </p>
               </summary>
               <p class="faq__answer">
-                Главное отличие фена Dyson в быстром и безопасном высушивании
-                волос. В рукоятку встроен датчик температуры, благодаря которому
-                она не поднимается выше 100 градусов. В комплекте 5 насадок,
-                которые подходят для укладки и сушки на разных режимах. Есть
-                практичный черный чехол, предназначенный для аккуратной
-                перевозки и хранения. Расчески можно использовать отдельно от
-                девайса или во время сушки с целью предотвратить запутывание.
+                <span class="faq__answer-inner">
+                  Главное отличие фена Dyson в быстром и безопасном высушивании
+                  волос. В рукоятку встроен датчик температуры, благодаря которому
+                  она не поднимается выше 100 градусов. В комплекте 5 насадок,
+                  которые подходят для укладки и сушки на разных режимах. Есть
+                  практичный черный чехол, предназначенный для аккуратной
+                  перевозки и хранения. Расчески можно использовать отдельно от
+                  девайса или во время сушки с целью предотвратить запутывание.
+                </span>
               </p>
             </details>
           </div>
@@ -2090,7 +2104,7 @@
       </div>
     </footer>
     <div class="modal">
-      <div class="modal__window modal-review" data-modal-window="buy">
+      <div class="modal__window modal-review" data-modal-window="review">
         <button
           class="modal__close"
           aria-label="Закрыть"
@@ -2121,7 +2135,9 @@
                 name="rating"
                 required
               >
-                <option value="" disabled selected hidden>Ваша оценка товара</option>
+                <option value="" disabled selected hidden>
+                  Ваша оценка товара
+                </option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -2132,7 +2148,7 @@
             <label for="review" class="modal-review__label">
               <textarea
                 id="review"
-                class="modal-review__input "
+                class="modal-review__input"
                 type="tel"
                 placeholder="Оставьте Ваш отзыв здесь"
                 name="review"
@@ -2141,8 +2157,51 @@
                 required
               ></textarea>
             </label>
-            <button class="modal-review__submit">Отправить</button>
+            <button class="modal-review__submit" type="submit">
+              Отправить
+            </button>
           </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal">
+      <div class="modal__window modal-cart" data-modal-window="cart-modal">
+        <button
+          class="modal__close"
+          aria-label="Закрыть"
+          title="Закрыть"
+          data-modal-close
+        >
+          <svg width="24" height="24">
+            <use href="./icons/sprite.svg#cross"></use>
+          </svg>
+        </button>
+        <div class="modal__content modal-cart__content">
+          <h3 class="modal-cart__title title-pro-large">Ваши товары</h3>
+          <ul class="modal-cart__list"></ul>
+          <div class="modal-cart__default">
+            <p class="modal-cart__text modal-text-default">
+              Пока здесь пусто :&#40;
+              <a
+                href="#special-offers"
+                class="modal-cart__link modal-text-default"
+                >Перейти к покупкам</a
+              >
+            </p>
+          </div>
+          <div class="modal-cart__btn-wrapper">
+            <a
+              class="modal-cart__btn-link"
+              href="./article.html"
+              target="_blank"
+              ><button class="modal-cart__btn" type="submit">
+                Перейти к оплате
+              </button></a
+            >
+            <button class="modal-cart__btn" type="reset">
+              Очистить корзину
+            </button>
+          </div>
         </div>
       </div>
     </div>
